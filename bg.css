@@ -1,0 +1,249 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* NAV */
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    list-style: none;
+    background: rgba(0,0,0,.6);
+    padding: 10px 20px;
+    border-radius: 12px;
+    z-index: 1000;
+}
+
+.nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    color: rgb(250, 177, 94);
+}
+
+/* HERO PARALLAX */
+
+.parallax {
+    position: relative;
+    height: 120vh;
+    background: url("steerbanner.png") center/cover no-repeat fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+
+
+/* OVERLAY */
+
+.parallax::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.parallax * {
+    position:relative;
+    z-index:2;
+}
+
+.parallax h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.parallax p {
+    font-size: 20px;
+}
+
+/* SERVICES */
+
+.services {
+    background:#111;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.services h2 {
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+.service-buttons {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+/* BUTTONS */
+
+.btn {
+    padding:12px 25px;
+    border:none;
+    background:rgb(251, 249, 249);
+    color:rgb(0, 0, 0);
+    border-radius:25px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.btn:hover {
+    background:rgb(250, 177, 94);
+    transform:scale(1.05);
+}
+
+.btn.outline {
+    background:white;
+    border:2px solid rgb(0, 0, 0);
+}
+
+.btn.outline:hover {
+    background:rgb(250, 177, 94);
+    color:rgb(0, 0, 0);
+}
+
+/* ABOUT */
+
+.content {
+    padding:100px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.content h2 {
+    margin-bottom:20px;
+}
+
+.content p {
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    background: #111;
+    color: white;
+    padding: 80px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* QR Section */
+.qr-section {
+    flex: 1;
+}
+
+.qrcode {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Quick Links */
+.quick-links {
+    flex: 1;
+    text-align: right;
+}
+
+.quick-links h3 {
+    margin-bottom: 15px;
+}
+
+.quick-links a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.quick-links a:hover {
+    color: rgb(250, 177, 94);
+}
+
+.panel{
+    margin-top:30px;
+    padding:20px;
+    background:#111;
+    color:white;
+    border-radius:10px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+ 
+@media (max-width: 768px) {
+    .panel {
+        width: 90%;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quick-links {
+        text-align: center;
+    }
+}
+
+.vehicle-box input{
+padding:10px;
+width:260px;
+border-radius:8px;
+border:none;
+margin-bottom:20px;
+}
+
+.suggestion{
+background:#222;
+padding:8px;
+margin:3px 0;
+cursor:pointer;
+border-radius:6px;
+}
+
+.suggestion:hover{
+background:#333;
+}
+
+
+
+
+
+
+
